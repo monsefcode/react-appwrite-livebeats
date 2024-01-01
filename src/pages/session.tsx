@@ -1,7 +1,7 @@
 import Container from "@/components/Container";
 import { useAuth } from "@/hooks/use-auth";
 import { AppwriteException } from "appwrite";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useLocation } from "wouter";
 
 function Session() {
