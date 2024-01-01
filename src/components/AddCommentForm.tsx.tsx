@@ -1,22 +1,20 @@
 import { Fragment, useRef, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { ExclamationTriangleIcon } from "@heroicons/react/24/outline";
-import FormRow from "./FormRow";
-import FormLabel from "./FormLabel";
 import { AppwriteException } from "appwrite";
 // ======================================================================================================== //
 
 type CommentProps = {
   open: boolean;
   setOpen: (open: boolean) => void;
-  eventId: string;
+  eventId?: string;
 };
 
 export default function AddCommentForm({
   open,
   setOpen,
-  eventId,
-}: CommentProps) {
+}: // eventId,
+CommentProps) {
   const cancelButtonRef = useRef(null);
 
   const [error, setError] = useState<string | null>(null);
@@ -27,11 +25,11 @@ export default function AddCommentForm({
 
     setIsSubmiting(true);
 
-    const target = e.target as typeof e.target & {
-      comment: { value: string };
-    };
+    // const target = e.target as typeof e.target & {
+    //   comment: { value: string };
+    // };
 
-    const comment = target.comment.value;
+    // const comment = target.comment.value;
 
     // create a function to return "Commenter Date ago"
     // const date = new Date();

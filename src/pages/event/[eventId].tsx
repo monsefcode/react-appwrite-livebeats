@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { getEvent, deleteEvent } from "@/api/events";
 import { Event } from "@/lib/types";
 import Button from "@/components/Button";
-import { deleteFile, getImageUrl } from "@/lib/storage";
+import { getImageUrl } from "@/lib/storage";
 import { useLocation } from "wouter";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/use-auth";
